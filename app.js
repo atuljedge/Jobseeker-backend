@@ -12,9 +12,9 @@ import Errorhandler from "./middlewares/error.js"
 
 
 const app=express()
-dotenv.config({path:"./config/config.env"});
+dotenv.config({path:"./config/config.env"}); 
 
-app.use(
+app.use( 
    cors(
     {
     origin: [process.env.FRONTEND_URI],
