@@ -10,7 +10,6 @@ import Dbconnection from "./Database/Dbconnection.js";
 import Errorhandler from "./middlewares/error.js"
 
 
-
 const app=express()
 dotenv.config({path:"./config/config.env"}); 
 
@@ -19,9 +18,14 @@ app.use(
     {
     origin: [process.env.FRONTEND_URI,"https://main--jobseeker-atul.netlify.app"],
     method: ["GET", "POST", "DELETE", "PUT"],
-    credentials: true,}
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    preflightContinue: false,
+    optionsSuccessStatus: 204
+   }
    )
 );
+
 
 
 app.use(cookieParser());
