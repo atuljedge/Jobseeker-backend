@@ -1,4 +1,4 @@
-import {catchAsyncError} from './catchasyncError.js';
+import {catchAsyncError} from './catchAsyncError.js';
 import Errorhandler from './error.js';
 import jwt from 'jsonwebtoken';
 import {User} from '../models/userSchema.js';
